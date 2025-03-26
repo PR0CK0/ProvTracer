@@ -24,6 +24,10 @@ class GPTPrompter(GPT):
     self.__screenshotImageBase64 = self.__imageUtils.getBase64Image(screenshotImageFilePath)
     self.__contexts = contexts
     
+    if not self.__screenshotImageBase64:
+      print(f'[GPTPrompter] Skipping bad or missing screenshot: {screenshotImageFilePath}')
+      return
+
     if not self.__contexts.recordOnly:
       self.getPlaintextResponse()
   
@@ -44,7 +48,6 @@ class GPTPrompter(GPT):
       print(e)
       print('Bad file for %s' %self.__screenshotImageFilePath)
       
-    # TODO maybe remove image here if bad? save from 400 exception?
     if response is not None:
       responseContent = response.choices[0].message.content
       self.saveResponseToFile(responseContent)

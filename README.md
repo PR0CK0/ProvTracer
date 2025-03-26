@@ -41,6 +41,7 @@ You can watch a video of how to use ProvTracer [here](https://youtu.be/wsgQWTsAl
    1. Save context and proceed for a context-rich MLLM session (ideal)
    2. Skip context and proceed for a context-less MLLM session
    3. Record only for no MLLM involvement
+5. Once done with a session, check the ```procko.provtracer/outputs``` folder for your work session output content
 
 ## Setup
 * Clone the repo (or just download all the files)
@@ -109,6 +110,8 @@ This window persists during a ProvTracer session, to ensure the user is not unaw
 
 ## Insight Gathering
 Once provenance trace knowledge graphs for a work session (or several of them) are acquired, they can be used to gather insight about the provenance of the work performed.
+
+Outputs from ProvTracer are stored in ```procko.provtracer/outputs```. The outputs folder is generated automatically. Each work session gets its own dated folder.
 
 ### Ontology
 ![PROV-O BFO ontology underlying ProvTracer](./media/ontology.png)

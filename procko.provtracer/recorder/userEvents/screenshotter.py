@@ -13,14 +13,20 @@ class Screenshotter():
   
   def takeScreenshot(self, timestamp):
     imageUtils = ImageUtils()
-    
     filePath = os.path.join(self.outputFolder, f'screenshot_{timestamp}.png')
-    screenshot = pyautogui.screenshot()
-    screenshot.save(filePath)
     
+    try:
+      screenshot = pyautogui.screenshot()
+      screenshot.save(filePath)
+    except Exception as e:
+      print(f'[Screenshot error, possibly the screensaver was on] {e}')
+      return None
+
     if imageUtils.isBadImage(filePath):
       os.remove(filePath)
       print(f'Deleted image due to verification issue: {filePath}')
+      return None
     else:
       imageUtils.compressImage(filePath, self.__IMAGE_QUALITY_PERCENT)
       print(os.path.splitext(os.path.basename(filePath))[0])
+      return filePath
