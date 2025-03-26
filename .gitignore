@@ -1,0 +1,13 @@
+# Ignore all contents in outputs/ but keep the folder itself
+procko.provtracer/outputs/*
+procko.provtracer/!outputs/.gitkeep
+
+__pycache__/
+**/__pycache__/
+
+*.pyc
+*.pyo
+*.pyd
+
+venv/
+env/

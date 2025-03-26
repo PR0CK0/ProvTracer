@@ -1,0 +1,24 @@
+{
+  "promptBodies": {
+    "turtlePrompt": "TBD",
+    "plaintextPrompt": "The provided image is a screenshot of a user's computer as they are working. Describe what they are doing in detail. Do not use newlines. Answer in 3-5 sentences."
+  },
+  "ragBodies": {
+    "turtlePrompt": "TBD",
+    "plaintextPrompt": "TBD"
+  },
+  "transitions": {
+    "openEndedTransition": "The user has stated that their screen use is open-ended, i.e., they may use many windows in various areas of the screen.",
+    "sideBySideTransition": "The user has stated that one side of the screen is the 'source' artifact or artifacts, and the other side is the working area. In general, the 'source' artifact(s) influence(s) the development of the working side, which may include several artifacts.",
+    "contextTransition": "Below is some additional context provided by the user."
+  },
+  "modifiers": {
+    "primerContextModifier": "Here is what the user stated they were working on when this screenshot was taken: ",
+    "windowEventsModifier": "Here is a list of application window titles that the user opened since the last screenshot: ",
+    "mouseEventsModifier": "Here is a list of user mouse events since the last screenshot: ",
+    "keyboardEventsModifier": "Here is a list of user keyboard events since the last screenshot. Compare what they typed with what is present in the screenshot: ",
+    "clipboardEventsModifier": "Here is what the user copied/pasted into their clipboard since the last screenshot. It is trimmed to 500 characters: ",
+    "narratorAudioModifier": "Here is what an on-screen narrator said since the last screenshot: ",
+    "sourceArtifactModifier": "Attached is the source artifact the user uploaded. This artifact is determined by the user to be the primary basis for their work  in the current session, e.g., it may be a requirements document or a contract."
+  }
+}
