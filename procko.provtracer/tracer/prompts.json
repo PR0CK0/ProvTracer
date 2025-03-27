@@ -1,7 +1,7 @@
 {
   "promptBodies": {
     "turtlePrompt": "TBD",
-    "plaintextPrompt": "The provided image is a screenshot of a user's computer as they are working. Describe what they are doing in detail. Do not use newlines. Answer in 3-5 sentences."
+    "plaintextPrompt": "The provided image is a screenshot of a user's computer as they are working. Describe what they are doing in detail. Do not use newlines. Avoid describing personal information, such as passwords. Answer in 3-5 sentences."
   },
   "ragBodies": {
     "turtlePrompt": "TBD",
