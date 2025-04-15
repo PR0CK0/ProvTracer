@@ -1,0 +1,16 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX pto: <https://github.com/PR0CK0/ProvTracer/tree/main/procko.provtracer/grapher/provtracer-o.ttl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COUNT(?k) AS ?keyboardCount)
+  (COUNT(?m) AS ?mouseCount)
+  (COUNT(?w) AS ?windowCount)
+  (COUNT(?c) AS ?clipboardCount)
+WHERE {
+  ?packet a pto:TimeslicePacket .
+  OPTIONAL { ?packet pto:keyboard_events ?k . FILTER(?k != "No keyboard events.") }
+  OPTIONAL { ?packet pto:mouse_events ?m . FILTER(?m != "No mouse events.") }
+  OPTIONAL { ?packet pto:window_events ?w . FILTER(?w != "No window events.") }
+  OPTIONAL { ?packet pto:clipboard_events ?c . FILTER(?c != "No clipboard content.") }
+}

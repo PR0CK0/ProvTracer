@@ -1,0 +1,6 @@
+PREFIX pto: <https://github.com/PR0CK0/ProvTracer/tree/main/procko.provtracer/grapher/provtracer-o.ttl#>
+
+SELECT (COUNT(?packet) AS ?totalTimeslicePackets)
+WHERE {
+  ?packet a pto:TimeslicePacket .
+}

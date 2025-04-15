@@ -1,0 +1,13 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX pto: <https://github.com/PR0CK0/ProvTracer/tree/main/procko.provtracer/grapher/provtracer-o.ttl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (MIN(?start) AS ?sessionStart)
+       (MAX(?start) AS ?sessionEnd)
+       ((MAX(?start) - MIN(?start)) AS ?elapsedDuration)
+WHERE {
+  ?timeslice a pto:WorkTimeslice ;
+             prov:startedAtTime ?start ;
+             prov:wasInformedBy ?session .
+  ?session a pto:WorkSession .
+}

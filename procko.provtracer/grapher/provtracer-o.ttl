@@ -1,0 +1,40 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo#> .
+@prefix pto: <https://github.com/PR0CK0/ProvTracer/tree/main/procko.provtracer/grapher/provtracer-o.ttl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pto:WorkSession a owl:Class,
+        prov:Activity .
+
+bfo:0000002 a owl:Class ;
+    rdfs:label "Continuant" ;
+    rdfs:isDefinedBy bfo: .
+
+bfo:0000015 a owl:Class ;
+    rdfs:label "Process" ;
+    rdfs:isDefinedBy bfo: .
+
+bfo:0000023 a owl:Class ;
+    rdfs:label "Role" ;
+    rdfs:isDefinedBy bfo: .
+
+prov:Agent a owl:Class ;
+    owl:subClassOf bfo:0000023 .
+
+prov:Entity a owl:Class ;
+    owl:equivalentClass bfo:0000002 .
+
+prov:Activity a owl:Class ;
+    owl:equivalentClass bfo:0000015 .
+
+pto:TimeslicePacket a owl:Class,
+        prov:Entity .
+
+pto:WorkTimeslice a owl:Class,
+        prov:Activity .
+
+pto:KnowledgeWorker a prov:Agent .
+
