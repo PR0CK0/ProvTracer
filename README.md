@@ -116,7 +116,7 @@ Once provenance trace knowledge graphs for a work session (or several of them) a
 Outputs from ProvTracer are stored in ```procko.provtracer/outputs```. The outputs folder is generated automatically. Each work session gets its own dated folder.
 
 ### SPARQL Querying
-Provenance trace knowledge graphs can be queried with SPARQL directly for quantitative analysis, e.g., temporal measurement between task completions, as proper XSD datetimes are used in the output graphs. Example queries can be found in the [case studies directory](./case_studies/)
+Provenance trace knowledge graphs can be queried with SPARQL directly for quantitative analysis, e.g., temporal measurement between task completions, as proper XSD datetimes are used in the output graphs. Example queries can be found in the [case studies directory](./case_studies/).
 
 ### LLM Prompting
 Provenance trace knowledge graphs can be queried with a LLM, by simply uploading the graph file and asking questions. These queries are best suited for questions seeking qualitative or thematic analysis.
